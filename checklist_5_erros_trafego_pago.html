@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Checklist: 5 Erros de Tráfego Pago que Estão Matando Suas Vendas</title>
+    <meta name="description" content="Aprenda a evitar os 5 erros mais comuns no tráfego pago, economize orçamento e aumente seu ROI. Guia prático com passos acionáveis e CTA para o próximo passo." />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Checklist: 5 Erros de Tráfego Pago" />
+    <meta property="og:description" content="Evite armadilhas que queimam seu orçamento e aumente seu ROI com passos simples e práticos." />
+    <meta property="og:type" content="article" />
+
+    <style>
+      :root {
+        --brand: #1F6FEB; /* azul consistente com a landing */
+        --brand-dark: #1a5acc;
+        --bg: #F6F9FC;
+        --text: #0F172A;
+        --muted: #475569;
+        --card: #ffffff;
+        --success: #16A34A;
+        --warning: #EAB308;
+        --danger: #DC2626;
+        --border: #E2E8F0;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: var(--bg);
+        padding-top: 72px;
+      }
+      .container { width: 100%; max-width: 980px; margin: 0 auto; padding: 0 20px; }
+      header {
+        padding: 18px 0;
+        background: #ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100; /* maior para ficar acima do conteúdo */
+        border-bottom: 1px solid var(--border);
+        }
+      .brand { font-weight: 800; letter-spacing: .3px; color: var(--brand); text-decoration: none; }
+      .header-cta { display:flex; gap:10px; align-items:center; }
+      .btn { display:inline-block; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: transform .06s ease, background .2s ease; }
+      .btn-primary { background: var(--brand); color: #fff; }
+      .btn-primary:hover { background: var(--brand-dark); transform: translateY(-1px); }
+      .btn-outline { background: #fff; color: var(--brand); border: 2px solid var(--brand); }
+
+      .hero { padding: 34px 0 18px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items:center; }
+      .hero h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+      .hero p.lead { font-size: clamp(16px, 2vw, 19px); color: var(--muted); margin: 0 0 16px; }
+      .hero-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 8px 30px rgba(31,111,235,.08); }
+
+      .section { margin: 26px 0; }
+      .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 8px 24px rgba(2,6,23,.05); }
+      h2 { margin: 0 0 8px; font-size: 24px; }
+      h3 { margin: 12px 0 6px; font-size: 18px; }
+      p { color: #111827; }
+      .muted { color: var(--muted); }
+
+      .list-check { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 12px; }
+      .list-check li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
+      .check { width: 28px; height: 28px; border-radius: 50%; background: #E6F0FF; display: grid; place-items: center; color: var(--brand); font-weight: 800; }
+
+      .error { border-left: 4px solid var(--danger); padding-left: 12px; background: #FFF1F2; border-radius: 8px; }
+      .tip { border-left: 4px solid var(--success); padding-left: 12px; background: #ECFDF5; border-radius: 8px; }
+      .warn { border-left: 4px solid var(--warning); padding-left: 12px; background: #FEFBE8; border-radius: 8px; }
+
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+
+      .cta-stack { display:flex; gap:10px; flex-wrap: wrap; align-items:center; margin-top: 12px; }
+      .note { color: #475569; font-size: 13px; }
+
+      .module { border: 1px dashed var(--border); border-radius: 10px; padding: 12px; }
+
+      .faq details { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+      .faq details + details { margin-top: 10px; }
+      .faq summary { font-weight: 700; cursor: pointer; }
+
+      /* Modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(2,6,23,.6); display: none; align-items: center; justify-content: center; padding: 16px; }
+    .modal-overlay.open { display: flex; }
+    .modal-content { 
+      position: relative; 
+      background: #fff; 
+      border: 1px solid var(--border); 
+      border-radius: 14px; 
+      width: 100%; 
+      max-width: 620px; 
+      max-height: 70vh; 
+      overflow: auto; 
+      box-shadow: 0 20px 60px rgba(0,0,0,.25); 
+      padding: 18px; 
+      margin-top: 80px;
+    }
+    .modal-close { position: absolute; top: 10px; right: 12px; background: transparent; border: 0; font-size: 24px; color: #334155; cursor: pointer; }
+
+      footer { margin: 40px 0 28px; color: #64748B; font-size: 14px; }
+      footer a { color: var(--brand); text-decoration: none; }
+
+      @media (max-width: 980px) {
+        .hero { grid-template-columns: 1fr; }
+      }
+
+      /* Estilo de impressão (PDF) */
+      @media print {
+        header, .no-print { display: none !important; }
+        .modal-overlay { display: none !important; }
+        .container { max-width: 100%; }
+        body { background: #fff; } /* se você zerou padding-top do header aqui, mantenha */
+        .card, .hero-card { box-shadow: none; border: 1px solid #e5e7eb; }
+        a { color: #000; text-decoration: underline; }
+     }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+        <a class="brand" href="#top">Domine Tráfego Pago</a>
+        <div class="header-cta no-print">
+          <a class="btn btn-outline" href="#acao">Checklist</a>
+          <a class="btn btn-primary" href="https://go.hotmart.com/F102061877S?ap=a4f4&utm_source=organic&utm_medium=ebook&utm_campaign=checklist_pdf&utm_content=header_cta" target="_blank" rel="noopener">Quero o Curso</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Checklist: 5 Erros de Tráfego Pago que Estão Matando Suas Vendas</h1>
+          <p class="lead">Evite as armadilhas mais comuns, pare de desperdiçar orçamento e crie campanhas que realmente geram vendas — com passos simples e acionáveis.</p>
+          <div class="cta-stack no-print">
+            <a class="btn btn-primary" href="#acao">Aplicar o checklist agora</a>
+            <a class="btn btn-outline" href="#curso">Conhecer o Curso</a>
+            <span class="note">Sem promessas milagrosas. Processo claro, passo a passo.</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3 style="margin:0 0 6px;">Para quem é este material?</h3>
+          <ul class="list-check">
+            <li><span class="check">✓</span><span>Afiliados e iniciantes no tráfego pago que estão perdidos entre tantas “dicas”.</span></li>
+            <li><span class="check">✓</span><span>Quem gasta e não consegue sair do <em>breakeven</em> (ou vive no prejuízo).</span></li>
+            <li><span class="check">✓</span><span>Quem quer um roteiro simples para ajustar campanhas e vender de forma previsível.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="dores" class="section grid-2">
+        <div class="card">
+          <h2>#1: CPL alto e queda de qualidade</h2>
+          <p class="muted">Você aumenta orçamento e o CPL sobe junto, enquanto a qualidade do lead cai.</p>
+          <div class="warn">
+            <p><strong>Por que acontece:</strong> Segmentação ampla demais, criativos desconectados do público e oferta genérica.</p>
+          </div>
+          <div class="tip" style="margin-top:10px;">
+            <p><strong>Correção rápida:</strong> Defina 1 persona, 1 dor principal e 1 promessa clara por campanha. Ajuste o criativo para o problema específico.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>#2: Cliques não viram vendas</h2>
+          <p class="muted">Taxas de clique até existem, mas a conversão não acompanha.</p>
+          <div class="warn">
+            <p><strong>Por que acontece:</strong> Página desalinhada com o anúncio, prova fraca e CTA tímido.</p>
+          </div>
+          <div class="tip" style="margin-top:10px;">
+            <p><strong>Correção rápida:</strong> Repita a mensagem do anúncio na dobra, destaque benefícios e tenha um único CTA forte.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid-2">
+        <div class="card">
+          <h2>#3: Campanhas travadas no aprendizado</h2>
+          <p class="muted">Sem volume, sem dados. Sem dados, sem otimização.</p>
+          <div class="warn">
+            <p><strong>Por que acontece:</strong> Orçamento fragmentado em muitos conjuntos e testes sem hipótese.</p>
+          </div>
+          <div class="tip" style="margin-top:10px;">
+            <p><strong>Correção rápida:</strong> Concentre orçamento em 1-2 hipóteses por ciclo e deixe o algoritmo aprender.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>#4: Criativos “bonitos”, mas que não vendem</h2>
+          <p class="muted">Foco no design, não na mensagem.</p>
+          <div class="warn">
+            <p><strong>Por que acontece:</strong> Falta de gancho, prova e chamada clara para ação.</p>
+          </div>
+          <div class="tip" style="margin-top:10px;">
+            <p><strong>Correção rápida:</strong> Use a estrutura Gancho → Dor → Prova → Oferta → CTA.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>#5: Você não sabe o que testar primeiro</h2>
+        <p class="muted">Tudo parece prioridade — e nada traz o avanço real.</p>
+        <div class="warn">
+          <p><strong>Por que acontece:</strong> Ausência de roteiro de otimização e métricas de decisão.</p>
+        </div>
+        <div class="tip" style="margin-top:10px;">
+          <p><strong>Correção rápida:</strong> Siga o checklist a seguir e teste em ordem: Oferta → Criativo → Público → Página → Orçamento.</p>
+        </div>
+      </section>
+
+      <section id="acao" class="section card">
+        <h2>Checklist Prático (Ação Imediata)</h2>
+        <p class="muted">Use esta lista hoje. Marque cada item concluído antes de aumentar orçamento.</p>
+        <div class="grid-2" style="margin-top:10px;">
+          <div class="module">
+            <h3>1) Oferta</h3>
+            <ul class="list-check">
+              <li><span class="check">✓</span><span>Promessa específica (1 dor principal) e benefício mensurável.</span></li>
+              <li><span class="check">✓</span><span>Uma ação por campanha (lead, clique, compra).</span></li>
+              <li><span class="check">✓</span><span>CTA forte e visível na dobra.</span></li>
+            </ul>
+          </div>
+          <div class="module">
+            <h3>2) Criativo</h3>
+            <ul class="list-check">
+              <li><span class="check">✓</span><span>Gancho nos 3 primeiros segundos.</span></li>
+              <li><span class="check">✓</span><span>Prova (números, prints, processo, depoimentos).</span></li>
+              <li><span class="check">✓</span><span>Mensagem simples espelhando a dor e o benefício.</span></li>
+            </ul>
+          </div>
+          <div class="module">
+            <h3>3) Público</h3>
+            <ul class="list-check">
+              <li><span class="check">✓</span><span>1-2 públicos por ciclo, sem sobreposição, com exclusões.</span></li>
+              <li><span class="check">✓</span><span>Geos, idioma e posicionamentos revisados.</span></li>
+              <li><span class="check">✓</span><span>Orçamento mínimo para sair do aprendizado.</span></li>
+            </ul>
+          </div>
+          <div class="module">
+            <h3>4) Página</h3>
+            <ul class="list-check">
+              <li><span class="check">✓</span><span>Headline repete a promessa do anúncio.</span></li>
+              <li><span class="check">✓</span><span>Benefícios acima da dobra e prova visível.</span></li>
+              <li><span class="check">✓</span><span>CTA único e dominante; nada compete com ele.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-stack no-print" style="margin-top:14px;">
+          <a class="btn btn-primary" href="#curso">Quero o próximo passo</a>
+          <span class="note">Revisite este checklist a cada novo ciclo de testes.</span>
+        </div>
+      </section>
+
+      <section id="curso" class="section card">
+        <h2>A Solução Completa: Curso Tráfego Pago para Afiliados</h2>
+        <p class="muted">Quando você quiser sair do improviso e operar com método, este é o próximo passo natural.</p>
+        <div class="grid-3" style="margin-top:12px;">
+          <div class="module">
+            <h3>O que você vai aprender</h3>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Pesquisa de mercado aplicável e definição de oferta.</li>
+              <li>Estratégias de criativos que geram cliques qualificados.</li>
+              <li>Segmentação enxuta e escalável.</li>
+              <li>Otimização por métricas de decisão.</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h3>Como funciona</h3>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Aulas passo a passo + materiais de apoio.</li>
+              <li>Acesso online e atualizações.</li>
+              <li>Aplicação prática com frameworks.</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h3>Para quem é</h3>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Afiliados iniciantes a intermediários.</li>
+              <li>Quem busca previsibilidade e ROI.</li>
+              <li>Quem prefere método ao improviso.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-stack" style="margin-top:14px;">
+          <a id="open-modal" class="btn btn-primary" href="#" rel="noopener">Quero me inscrever agora</a>
+          <a class="btn btn-outline" href="https://go.hotmart.com/F102061877S?dp=1&utm_source=organic&utm_medium=ebook&utm_campaign=checklist_pdf&utm_content=cta_ver_pagina" target="_blank" rel="noopener">Ver página completa do curso</a>
+          <span class="note">Políticas, bônus e condições comerciais: confirme na página oficial.</span>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <h2>Perguntas Frequentes</h2>
+        <details>
+          <summary>Esse checklist serve para qualquer nicho?</summary>
+          <div style="margin-top:8px;">
+            <p>Sim. Os princípios são os mesmos: oferta clara, mensagem coerente, prova e teste com método. Adapte a linguagem ao seu público.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Em quanto tempo vejo resultado?</summary>
+          <div style="margin-top:8px;">
+            <p>Depende do estágio atual das suas campanhas e do orçamento. O checklist acelera o diagnóstico; o curso dá o método para otimizar de forma contínua.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Posso aplicar mesmo sendo iniciante?</summary>
+          <div style="margin-top:8px;">
+            <p>Sim. O material foi escrito para iniciantes e afiliados que desejam um caminho claro para evoluir.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section card no-print" style="text-align:center;">
+        <h2>Pronto para dar o próximo passo?</h2>
+        <p class="muted">Saia do improviso e opere com método. Comece hoje.</p>
+        <div class="cta-stack" style="justify-content:center;">
+          <a class="btn btn-primary" href="https://go.hotmart.com/F102061877S?ap=a4f4&utm_source=organic&utm_medium=ebook&utm_campaign=checklist_pdf&utm_content=cta_final" target="_blank" rel="noopener">Quero o Curso</a>
+          <a class="btn btn-outline" href="#acao">Rever o checklist</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal-form" class="modal-overlay no-print" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Fechar">×</button>
+          <!-- Begin Brevo Form (Modal) -->
+          <div class="sib-form" style="text-align: center; background-color: transparent;">
+            <div id="sib-form-container" class="sib-form-container">
+              <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                    <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">Sua assinatura não pôde ser validada.</span>
+                </div>
+              </div>
+              <div></div>
+              <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                    <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">Você fez sua assinatura com sucesso.</span>
+                </div>
+              </div>
+              <div></div>
+              <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:14px; border-width:1px; border-color:#E2E8F0; border-style:solid; direction:ltr">
+                <form id="sib-form" method="POST" action="https://ee8045f5.sibforms.com/serve/MUIFABTAyU4s5zMmsAGqAoujZOFKHHN1K9WlMhOqHY6KgP4t-g6hP3BTN75w5aDS_KPGOOmMlpMhz0HwrecnaxxvWIyBW_uueyGv0M5dTi_lqkRV5-tAN3zBKw8unrpikaU-kCZYMo0thWF3C-YvwibSv54dHaxho_GzxhCebklppnOMEsqR5sOUWjKRcyRF28mNcxbhojtI0y8Z" data-type="subscription">
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                      <p>Receba o checklist por e‑mail agora</p>
+                    </div>
+                  </div>
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                      <div class="sib-text-form-block">
+                        <p>Digite seu melhor e‑mail para receber o PDF gratuito agora. Leitura rápida (2–3 páginas).</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="padding: 8px 0;">
+                    <div class="sib-input sib-form-block">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row ">
+                          <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; font-family:Helvetica, sans-serif; color:#3c4858;" for="EMAIL" data-required="*">Seu melhor e‑mail</label>
+                          <div class="entry__field">
+                            <input class="input " type="email" id="EMAIL" name="EMAIL" autocomplete="email" aria-label="E-mail" placeholder="seunome@email.com" data-required="true" required />
+                          </div>
+                        </div>
+                        <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+                        <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">Enviaremos o PDF para este e‑mail.</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="padding: 8px 0;">
+                    <div class="sib-form-block" style="text-align: left">
+                      <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color: var(--brand); border-radius:10px; border-width:0px; padding: 12px 18px;" form="sib-form" type="submit">
+                        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="">
+                          <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                        </svg>
+                        Quero o checklist
+                      </button>
+                      <p style="margin:8px 0 0; font-size:12px; color:#64748B; text-align:left;">Sem spam. Você pode sair quando quiser.</p>
+                    </div>
+                  </div>
+                  <input type="text" name="email_address_check" value="" class="input--hidden">
+                  <input type="hidden" name="locale" value="pt">
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- End Brevo Form -->
+        </div>
+    </div>
+
+    <footer class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+      <div>© <span id="year"></span> Cairo | Tráfego Pago. Todos os direitos reservados.</div>
+      <div style="display:flex; gap:16px;">
+        <a href="https://go.hotmart.com/F102061877S?ap=a4f4&utm_source=organic&utm_medium=ebook&utm_campaign=checklist_pdf&utm_content=footer_checkout" target="_blank" rel="noopener">Checkout</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Modal open/close logic
+        (function(){
+        const modal = document.getElementById('modal-form');
+        const openBtn = document.getElementById('open-modal');
+        const closeBtn = modal?.querySelector('.modal-close');
+        const open = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
+        const close = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
+        openBtn?.addEventListener('click', (e) => { e.preventDefault(); open(); });
+        closeBtn?.addEventListener('click', close);
+        modal?.addEventListener('click', (e) => { if (e.target === modal) close(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+        })();
+
+        // Brevo messages/locale (mesmo da landing)
+        window.LOCALE = 'pt';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = 'A informação fornecida não é valida. Verifique o formato do campo e tente novamente.';
+        window.REQUIRED_ERROR_MESSAGE = 'Este campo não pode ser deixado em branco.';
+        window.GENERIC_INVALID_MESSAGE = 'A informação fornecida não é valida. Verifique o formato do campo e tente novamente.';
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+  </body>
+</html>
